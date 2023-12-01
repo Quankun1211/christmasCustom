@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family:'Pushster', cursive ;
+}
+header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./src/img/istockphoto-1726167056-170667a.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.text{
+    animation: text 1s linear;
+    
+}
+.text-merry{
+    margin-top: 50px;
+    font-size: 60px;
+    color:rgb(241, 14, 14);
+    font-family:'Pushster', cursive;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.snow1
+,.snow2{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./src/img/snow1.png);
+}
+.snow1{
+    background-size: 70em;
+    animation: snow 30s linear infinite;
+}
+.snow2{
+    background-size: 50em;
+    animation: snow2 30s linear infinite;
+}
+@keyframes snow{
+    100%{
+        background-position:70em 70em ;
+    }
+}
+@keyframes snow2{
+    100%{
+        background-position:50em 0 ;
+    }
+}
+@keyframes text {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes wrapBtn{
+    from{
+        transform:scale(0.5) ;
+    }
+    to{
+        transform: scale(1.0);
+    }
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+.select{
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    justify-content: center;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-position: 50px;
+    border-radius:10px ;
+    animation: wrapBtn 0.4s linear;
+}
+.btn-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-select{
+    font-family:'Pushster', cursive ;
+    color: rgb(242, 32, 32);
+    text-shadow:0 2px 3px rgba(0, 0, 0, 0.5);
+}
+.btn-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38%;
+    height:40px;
+    margin:20px 5px 0 0;
+    border-radius: 20px;
+    border-color:#c75b5b ;
+    color:#fff;
+    font-size: 18px;
+    font-family:'Pushster', cursive ;
+    background-image: linear-gradient(45deg,#c36c6c, #e61111);
+    transition: transform .2s;
+}
+.btn-select:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.noel{
+    position: absolute;
+    width: 100%;
+    animation: noel 6s linear;
+    opacity: 0;
+}
+@keyframes tree{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes noel{
+    from{
+        transform: translateX(0);
+
+    }
+    to{
+        transform: translateX(-250%);
+        opacity: 1;
+    }
+}
+
+.none{
+    display: none;
+}
+.footer-text{
+    color:rgb(255, 255, 255);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+}
+.none-select{
+    z-index: 1;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.none-img{
+    position: relative;
+    right:-20px;
+    width :120%;
+}
+.back-gift-btn{
+    margin:100px 0 0 0;
+    height:40px;
+    width:100px;
+    background-image: linear-gradient(45deg,#c36c6c, #e61111);
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    font-family:'Pushster', cursive ;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+.back-btn{
+    margin:50px 0 0 0;
+    height:40px;
+    width:100px;
+    background-image: linear-gradient(45deg,#c36c6c, #e61111);
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    font-family:'Pushster', cursive ;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+.back-btn,.back-gift-btn:hover{
+    transform: scale(1.2);
+}
+
+.gift-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    margin-top:140px;
+}
+.box{
+    width:200px;
+    transition: transform .2s;
+    margin:0 20px;
+}
+.box:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.gift{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+.gift-item{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 800px;
+    height: 440px;
+    border-radius: 20px;
+    display: none;
+    animation: fadeIn 0.2s linear;
+}
+.img-prod{
+    width:50%;
+}
+.img-prod:hover{
+    animation: rotateimg 0.6s linear infinite;
+}
+@keyframes rotateimg {
+    0%{
+        transform: rotate(3deg);
+    }
+    25%{
+        transform: rotate(-3deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+}
+.gift-item.active{
+    display: block;
+}
+.close{
+    position: absolute;
+    right:20px;
+    top: 15px;
+    cursor: pointer;
+    width:50px;
+    height:30px;
+    background-color: red;
+    line-height: 30px;
+    border-radius: 20px;
+    color:#fff;
+}
+
+.gift-box.none{
+    display: none;
+}
+.none-select.none{
+    display: none;
+}
+.gift-text{
+    margin-top:10px;
+    color:rgb(255, 0, 0);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    font-size: 28px;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes fadeIn {
+    from{
+        transform: scale(0.3);
+    }
+    to{
+        transform: scale(1.0);
+    }
+}
+
+.yes-text{
+    display: none;
+}
+.yes-text.active{
+    display: block;
+}
+
+@media screen and (min-width: 769px) {
+    /*PC*/
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
+
+}
+
+@media only screen and (max-device-width: 768px) {
+    .header{
+        width:100%;
+        height: 100%;
+    }
+    .content{
+        width:100%;
+    }
+    .select{
+        width:100%;
+    }
+    .gift{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 240px 0;
+    }
+    .gift-item{
+        width:70%;
+    }
+}
