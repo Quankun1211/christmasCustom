@@ -328,5 +328,24 @@ header{
     }
     .gift-item{
         width:70%;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .close{
+        margin:auto;
+        position:unset;
+        margin-top:50px;
+    }
+    .none-select{
+        z-index: 1;
+        position: fixed;
+        top:200px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 }
